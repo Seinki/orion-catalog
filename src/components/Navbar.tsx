@@ -1,27 +1,30 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FiShoppingCart, FiMenu, FiX } from 'react-icons/fi';
-import { useCartStore } from '../store/cartStore';
+import { motion } from "framer-motion";
+import React from "react";
+import { FiMenu, FiShoppingCart, FiX } from "react-icons/fi";
+import { useCartStore } from "../store/cartStore";
 
 interface NavbarProps {
   currentPage: string;
   onPageChange: (page: string) => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
+export const Navbar: React.FC<NavbarProps> = ({
+  currentPage,
+  onPageChange,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { toggleCart, getTotalItems } = useCartStore();
   const totalItems = getTotalItems();
 
   const navItems = [
-    { name: 'Beranda', key: 'home' },
-    { name: 'Produk', key: 'products' },
-    { name: 'Dukungan', key: 'support' },
-    { name: 'Kontak', key: 'contact' }
+    { name: "Beranda", key: "home" },
+    { name: "Produk", key: "products" },
+    { name: "Dukungan", key: "support" },
+    { name: "Kontak", key: "contact" },
   ];
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -30,16 +33,16 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => 
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2 cursor-pointer"
-            onClick={() => onPageChange('home')}
+            onClick={() => onPageChange("home")}
           >
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">L</span>
             </div>
             <div>
-              <h1 className="text-white font-bold text-xl">LANBON</h1>
+              <h1 className="text-white font-bold text-xl">Orion+</h1>
               <p className="text-cyan-400 text-xs">Smart Home</p>
             </div>
           </motion.div>
@@ -54,8 +57,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => 
                 onClick={() => onPageChange(item.key)}
                 className={`relative px-4 py-2 text-sm font-medium transition-colors ${
                   currentPage === item.key
-                    ? 'text-cyan-400'
-                    : 'text-slate-300 hover:text-cyan-400'
+                    ? "text-cyan-400"
+                    : "text-slate-300 hover:text-cyan-400"
                 }`}
               >
                 {item.name}
@@ -104,7 +107,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => 
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden mt-4 pt-4 border-t border-slate-700"
           >
@@ -117,8 +120,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => 
                 }}
                 className={`block w-full text-left px-4 py-3 text-sm font-medium transition-colors ${
                   currentPage === item.key
-                    ? 'text-cyan-400 bg-slate-800/50'
-                    : 'text-slate-300 hover:text-cyan-400 hover:bg-slate-800/30'
+                    ? "text-cyan-400 bg-slate-800/50"
+                    : "text-slate-300 hover:text-cyan-400 hover:bg-slate-800/30"
                 }`}
               >
                 {item.name}

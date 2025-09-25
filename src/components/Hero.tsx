@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FiArrowRight, FiWifi, FiShield, FiZap } from 'react-icons/fi';
+import { motion } from "framer-motion";
+import React from "react";
+import { FiArrowRight, FiShield, FiWifi, FiZap } from "react-icons/fi";
 
 interface HeroProps {
   onExploreProducts: () => void;
@@ -19,7 +19,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
           className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl"
         />
@@ -31,13 +31,13 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
           className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
         />
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-20 relative z-10 mt-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
           <motion.div
@@ -47,14 +47,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                LANBON
+                Orion+
               </span>
               <br />
               <span className="text-3xl md:text-4xl font-light text-slate-300">
                 Smart Home
               </span>
             </h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -73,9 +73,13 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
             className="flex flex-wrap justify-center gap-8 mb-12"
           >
             {[
-              { icon: FiWifi, text: 'WiFi Connected', color: 'text-cyan-400' },
-              { icon: FiShield, text: 'Secure & Safe', color: 'text-blue-400' },
-              { icon: FiZap, text: 'Energy Efficient', color: 'text-green-400' }
+              { icon: FiWifi, text: "WiFi Connected", color: "text-cyan-400" },
+              { icon: FiShield, text: "Secure & Safe", color: "text-blue-400" },
+              {
+                icon: FiZap,
+                text: "Energy Efficient",
+                color: "text-green-400",
+              },
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -83,7 +87,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
                 className="flex flex-col items-center space-y-2 p-4 rounded-lg bg-slate-800/30 backdrop-blur-sm border border-slate-700/50"
               >
                 <feature.icon className={`w-8 h-8 ${feature.color}`} />
-                <span className="text-sm text-slate-300 font-medium">{feature.text}</span>
+                <span className="text-sm text-slate-300 font-medium">
+                  {feature.text}
+                </span>
               </motion.div>
             ))}
           </motion.div>
@@ -93,9 +99,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
-              boxShadow: '0 20px 40px rgba(100, 255, 218, 0.3)'
+              boxShadow: "0 20px 40px rgba(100, 255, 218, 0.3)",
             }}
             whileTap={{ scale: 0.95 }}
             onClick={onExploreProducts}
@@ -109,7 +115,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
             >
               <FiArrowRight className="w-5 h-5" />
             </motion.div>
-            
+
             {/* Button Glow Effect */}
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-cyan-300 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -131,9 +137,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
             className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 max-w-2xl mx-auto"
           >
             {[
-              { number: '50+', label: 'Smart Products' },
-              { number: '10K+', label: 'Happy Homes' },
-              { number: '24/7', label: 'Support' }
+              { number: "50+", label: "Smart Products" },
+              { number: "10K+", label: "Happy Homes" },
+              { number: "24/7", label: "Support" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <motion.div

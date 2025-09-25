@@ -1,25 +1,25 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { ProductsPage } from './components/ProductsPage';
-import { SupportPage } from './components/SupportPage';
-import { ContactPage } from './components/ContactPage';
-import { CartModal } from './components/CartModal';
-import { NotificationToast } from './components/NotificationToast';
+import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
+import { CartModal } from "./components/CartModal";
+import { ContactPage } from "./components/ContactPage";
+import { Hero } from "./components/Hero";
+import { Navbar } from "./components/Navbar";
+import { NotificationToast } from "./components/NotificationToast";
+import { ProductsPage } from "./components/ProductsPage";
+import { SupportPage } from "./components/SupportPage";
 
-type PageType = 'home' | 'products' | 'support' | 'contact';
+type PageType = "home" | "products" | "support" | "contact";
 
 function App() {
-  const [currentPage, setCurrentPage] = React.useState<PageType>('home');
+  const [currentPage, setCurrentPage] = React.useState<PageType>("home");
   const [notification, setNotification] = React.useState<{
     message: string;
-    type: 'success' | 'error';
+    type: "success" | "error";
     isVisible: boolean;
   }>({
-    message: '',
-    type: 'success',
-    isVisible: false
+    message: "",
+    type: "success",
+    isVisible: false,
   });
 
   const handlePageChange = (page: string) => {
@@ -27,26 +27,29 @@ function App() {
   };
 
   const handleExploreProducts = () => {
-    setCurrentPage('products');
+    setCurrentPage("products");
   };
 
-  const showNotification = (message: string, type: 'success' | 'error' = 'success') => {
+  const showNotification = (
+    message: string,
+    type: "success" | "error" = "success"
+  ) => {
     setNotification({ message, type, isVisible: true });
   };
 
   const hideNotification = () => {
-    setNotification(prev => ({ ...prev, isVisible: false }));
+    setNotification((prev) => ({ ...prev, isVisible: false }));
   };
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'home':
+      case "home":
         return <Hero onExploreProducts={handleExploreProducts} />;
-      case 'products':
+      case "products":
         return <ProductsPage />;
-      case 'support':
+      case "support":
         return <SupportPage />;
-      case 'contact':
+      case "contact":
         return <ContactPage />;
       default:
         return <Hero onExploreProducts={handleExploreProducts} />;
@@ -57,7 +60,7 @@ function App() {
     <div className="min-h-screen bg-slate-900 text-white overflow-x-hidden">
       {/* Navigation */}
       <Navbar currentPage={currentPage} onPageChange={handlePageChange} />
-      
+
       {/* Page Content */}
       <AnimatePresence mode="wait">
         <motion.main
@@ -73,7 +76,7 @@ function App() {
 
       {/* Cart Modal */}
       <CartModal />
-      
+
       {/* Notification Toast */}
       <NotificationToast
         message={notification.message}
@@ -81,7 +84,7 @@ function App() {
         isVisible={notification.isVisible}
         onClose={hideNotification}
       />
-      
+
       {/* Footer */}
       <footer className="bg-slate-800/50 border-t border-slate-700/50 py-8 mt-20">
         <div className="container mx-auto px-4">
@@ -91,14 +94,14 @@ function App() {
                 <span className="text-white font-bold text-sm">L</span>
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg">LANBON Smart Home</h3>
+                <h3 className="text-white font-bold text-lg">Orion+</h3>
               </div>
             </div>
             <p className="text-slate-400 mb-4">
               Integrasi Cerdas untuk Hunian Masa Depan
             </p>
             <p className="text-slate-500 text-sm">
-              © 2025 LANBON Smart Home. All rights reserved.
+              © 2025 Orion+. All rights reserved.
             </p>
           </div>
         </div>

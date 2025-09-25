@@ -1,58 +1,71 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FiHelpCircle, FiTool, FiDownload, FiChevronDown } from 'react-icons/fi';
+import { motion } from "framer-motion";
+import React from "react";
+import {
+  FiChevronDown,
+  FiDownload,
+  FiHelpCircle,
+  FiTool,
+} from "react-icons/fi";
 
 export const SupportPage: React.FC = () => {
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
   const faqs = [
     {
-      question: 'Bagaimana cara mengatur perangkat LANBON untuk pertama kali?',
-      answer: 'Unduh aplikasi LANBON Smart Home, buat akun, dan ikuti panduan setup yang disediakan. Pastikan perangkat terhubung ke WiFi yang sama dengan smartphone Anda.'
+      question: "Bagaimana cara mengatur perangkat LANBON untuk pertama kali?",
+      answer:
+        "Unduh aplikasi Orion+, buat akun, dan ikuti panduan setup yang disediakan. Pastikan perangkat terhubung ke WiFi yang sama dengan smartphone Anda.",
     },
     {
-      question: 'Apakah produk LANBON kompatibel dengan Google Assistant dan Alexa?',
-      answer: 'Ya, semua produk LANBON Smart Home mendukung integrasi dengan Google Assistant dan Amazon Alexa. Anda dapat mengontrol perangkat menggunakan perintah suara.'
+      question:
+        "Apakah produk LANBON kompatibel dengan Google Assistant dan Alexa?",
+      answer:
+        "Ya, semua produk Orion+ mendukung integrasi dengan Google Assistant dan Amazon Alexa. Anda dapat mengontrol perangkat menggunakan perintah suara.",
     },
     {
-      question: 'Bagaimana jika saya lupa password WiFi dan perlu mengatur ulang perangkat?',
-      answer: 'Tekan dan tahan tombol reset pada perangkat selama 10 detik hingga lampu indikator berkedip. Perangkat akan kembali ke mode pairing dan siap untuk dikonfigurasi ulang.'
+      question:
+        "Bagaimana jika saya lupa password WiFi dan perlu mengatur ulang perangkat?",
+      answer:
+        "Tekan dan tahan tombol reset pada perangkat selama 10 detik hingga lampu indikator berkedip. Perangkat akan kembali ke mode pairing dan siap untuk dikonfigurasi ulang.",
     },
     {
-      question: 'Apakah saya perlu hub khusus untuk menggunakan produk LANBON?',
-      answer: 'Untuk sebagian besar produk WiFi, Anda tidak memerlukan hub khusus. Namun, untuk produk Zigbee, Anda memerlukan LANBON Control Hub untuk komunikasi optimal.'
+      question: "Apakah saya perlu hub khusus untuk menggunakan produk LANBON?",
+      answer:
+        "Untuk sebagian besar produk WiFi, Anda tidak memerlukan hub khusus. Namun, untuk produk Zigbee, Anda memerlukan LANBON Control Hub untuk komunikasi optimal.",
     },
     {
-      question: 'Bagaimana cara memperbarui firmware perangkat?',
-      answer: 'Buka aplikasi LANBON Smart Home, pilih perangkat yang ingin diperbarui, dan jika ada update tersedia, akan muncul notifikasi. Ikuti instruksi untuk memperbarui firmware secara otomatis.'
-    }
+      question: "Bagaimana cara memperbarui firmware perangkat?",
+      answer:
+        "Buka aplikasi Orion+, pilih perangkat yang ingin diperbarui, dan jika ada update tersedia, akan muncul notifikasi. Ikuti instruksi untuk memperbarui firmware secara otomatis.",
+    },
   ];
 
   const guides = [
     {
-      title: 'Panduan Setup Awal',
-      description: 'Langkah-langkah lengkap mengatur perangkat LANBON pertama kali',
+      title: "Panduan Setup Awal",
+      description:
+        "Langkah-langkah lengkap mengatur perangkat LANBON pertama kali",
       icon: FiTool,
-      downloadUrl: '#'
+      downloadUrl: "#",
     },
     {
-      title: 'Manual Instalasi Switch',
-      description: 'Panduan instalasi untuk semua jenis smart switch LANBON',
+      title: "Manual Instalasi Switch",
+      description: "Panduan instalasi untuk semua jenis smart switch LANBON",
       icon: FiDownload,
-      downloadUrl: '#'
+      downloadUrl: "#",
     },
     {
-      title: 'Konfigurasi Smart Lighting',
-      description: 'Cara mengatur dan mengoptimalkan smart lighting system',
+      title: "Konfigurasi Smart Lighting",
+      description: "Cara mengatur dan mengoptimalkan smart lighting system",
       icon: FiTool,
-      downloadUrl: '#'
+      downloadUrl: "#",
     },
     {
-      title: 'Troubleshooting Guide',
-      description: 'Solusi untuk masalah umum yang mungkin Anda hadapi',
+      title: "Troubleshooting Guide",
+      description: "Solusi untuk masalah umum yang mungkin Anda hadapi",
       icon: FiHelpCircle,
-      downloadUrl: '#'
-    }
+      downloadUrl: "#",
+    },
   ];
 
   return (
@@ -69,7 +82,8 @@ export const SupportPage: React.FC = () => {
             Pusat <span className="text-cyan-400">Dukungan</span>
           </h1>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Temukan jawaban, panduan instalasi, dan bantuan teknis untuk produk LANBON Smart Home
+            Temukan jawaban, panduan instalasi, dan bantuan teknis untuk produk
+            Orion+
           </p>
         </motion.div>
 
@@ -84,7 +98,7 @@ export const SupportPage: React.FC = () => {
               <FiHelpCircle className="mr-3 text-cyan-400" />
               Pertanyaan Umum (FAQ)
             </h2>
-            
+
             <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <motion.div
@@ -98,7 +112,9 @@ export const SupportPage: React.FC = () => {
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                     className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors"
                   >
-                    <span className="text-white font-medium pr-4">{faq.question}</span>
+                    <span className="text-white font-medium pr-4">
+                      {faq.question}
+                    </span>
                     <motion.div
                       animate={{ rotate: openFaq === index ? 180 : 0 }}
                       transition={{ duration: 0.2 }}
@@ -106,12 +122,12 @@ export const SupportPage: React.FC = () => {
                       <FiChevronDown className="text-cyan-400 flex-shrink-0" />
                     </motion.div>
                   </button>
-                  
+
                   <motion.div
                     initial={false}
-                    animate={{ 
-                      height: openFaq === index ? 'auto' : 0,
-                      opacity: openFaq === index ? 1 : 0
+                    animate={{
+                      height: openFaq === index ? "auto" : 0,
+                      opacity: openFaq === index ? 1 : 0,
                     }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
@@ -135,7 +151,7 @@ export const SupportPage: React.FC = () => {
               <FiDownload className="mr-3 text-cyan-400" />
               Panduan Instalasi
             </h2>
-            
+
             <div className="space-y-4">
               {guides.map((guide, index) => (
                 <motion.div
@@ -150,15 +166,13 @@ export const SupportPage: React.FC = () => {
                     <div className="p-3 bg-cyan-400/10 rounded-lg group-hover:bg-cyan-400/20 transition-colors">
                       <guide.icon className="w-6 h-6 text-cyan-400" />
                     </div>
-                    
+
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                         {guide.title}
                       </h3>
-                      <p className="text-slate-400 mb-4">
-                        {guide.description}
-                      </p>
-                      
+                      <p className="text-slate-400 mb-4">{guide.description}</p>
+
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -183,15 +197,24 @@ export const SupportPage: React.FC = () => {
           className="mt-16 text-center"
         >
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Butuh Bantuan Lebih Lanjut?</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Butuh Bantuan Lebih Lanjut?
+            </h3>
             <p className="text-slate-400 mb-6 max-w-2xl mx-auto">
-              Tim support kami siap membantu Anda 24/7. Hubungi kami melalui WhatsApp untuk mendapatkan bantuan langsung dari ahli smart home kami.
+              Tim support kami siap membantu Anda 24/7. Hubungi kami melalui
+              WhatsApp untuk mendapatkan bantuan langsung dari ahli smart home
+              kami.
             </p>
-            
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://wa.me/6281234567890?text=Halo, saya butuh bantuan dengan produk LANBON Smart Home', '_blank')}
+              onClick={() =>
+                window.open(
+                  "https://wa.me/6281234567890?text=Halo, saya butuh bantuan dengan produk Orion+",
+                  "_blank"
+                )
+              }
               className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300"
             >
               <FiHelpCircle size={20} />
