@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { FiMenu, FiShoppingCart, FiX } from "react-icons/fi";
+import logo from "../assets/orion-logo.png";
 import { useCartStore } from "../store/cartStore";
 
 interface NavbarProps {
@@ -38,12 +39,15 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center space-x-2 cursor-pointer"
             onClick={() => onPageChange("home")}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+            {/* <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">L</span>
-            </div>
-            <div>
-              <h1 className="text-white font-bold text-xl">Orion+</h1>
-              <p className="text-cyan-400 text-xs">Smart Home</p>
+            </div> */}
+            <div className="flex items-center space-x-2">
+              <img src={logo} alt="orion-logo" width={35} />
+              <span>
+                <h1 className="text-white font-bold text-xl">Orion+</h1>
+                <p className="text-cyan-400 text-xs">Smart Home</p>
+              </span>
             </div>
           </motion.div>
 
