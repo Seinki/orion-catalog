@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiX, FiCheck, FiShoppingCart } from 'react-icons/fi';
-import { Product } from '../types';
-import { useCartStore } from '../store/cartStore';
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiX, FiCheck, FiShoppingCart } from "react-icons/fi";
+import { Product } from "../types";
+import { useCartStore } from "../store/cartStore";
 
 interface ProductModalProps {
   product: Product | null;
@@ -10,7 +10,11 @@ interface ProductModalProps {
   onClose: () => void;
 }
 
-export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose }) => {
+export const ProductModal: React.FC<ProductModalProps> = ({
+  product,
+  isOpen,
+  onClose,
+}) => {
   const [isAdded, setIsAdded] = React.useState(false);
   const { addItem } = useCartStore();
 
@@ -36,7 +40,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            transition={{ type: 'spring', duration: 0.5 }}
+            transition={{ type: "spring", duration: 0.5 }}
             className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-slate-800 rounded-2xl border border-slate-700"
             onClick={(e) => e.stopPropagation()}
           >
@@ -66,37 +70,51 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
               {/* Product Details */}
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-3xl font-bold text-white mb-2">{product.name}</h2>
+                  <h2 className="text-3xl font-bold text-white mb-2">
+                    {product.name}
+                  </h2>
                   <p className="text-slate-400 mb-4">Model: {product.model}</p>
-                  <p className="text-slate-300 leading-relaxed">{product.description}</p>
+                  <p className="text-slate-300 leading-relaxed">
+                    {product.description}
+                  </p>
                 </div>
 
                 {/* Price */}
                 <div className="flex items-center space-x-4">
-                  <span className="text-4xl font-bold text-cyan-400">${product.price}</span>
+                  <span className="text-4xl font-bold text-cyan-400">
+                    ${product.price}
+                  </span>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={handleAddToCart}
                     className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                       isAdded
-                        ? 'bg-green-500 text-white'
-                        : 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
+                        ? "bg-green-500 text-white"
+                        : "bg-cyan-400 text-slate-900 hover:bg-cyan-300"
                     }`}
                   >
                     <motion.div
                       animate={{ rotate: isAdded ? 360 : 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      {isAdded ? <FiCheck size={20} /> : <FiShoppingCart size={20} />}
+                      {isAdded ? (
+                        <FiCheck size={20} />
+                      ) : (
+                        <FiShoppingCart size={20} />
+                      )}
                     </motion.div>
-                    <span>{isAdded ? 'Ditambahkan!' : 'Tambah ke Keranjang'}</span>
+                    <span>
+                      {isAdded ? "Ditambahkan!" : "Tambah ke Keranjang"}
+                    </span>
                   </motion.button>
                 </div>
 
                 {/* Features */}
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Fitur Utama</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    Fitur Utama
+                  </h3>
                   <div className="grid grid-cols-1 gap-2">
                     {product.features.map((feature, index) => (
                       <motion.div
@@ -112,24 +130,29 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
                     ))}
                   </div>
                 </div>
-
-                {/* Specifications */}
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Spesifikasi</h3>
-                  <div className="space-y-2">
-                    {Object.entries(product.specifications).map(([key, value], index) => (
+              </div>
+              {/* Specifications */}
+              <div className="md:col-span-2">
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  Spesifikasi
+                </h3>
+                <div className="space-y-2">
+                  {Object.entries(product.specifications).map(
+                    ([key, value], index) => (
                       <motion.div
                         key={key}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.05 }}
-                        className="flex justify-between py-2 border-b border-slate-700/50"
+                        className="grid grid-cols-2 py-2 border-b border-slate-700/50"
                       >
-                        <span className="text-slate-400">{key}</span>
-                        <span className="text-slate-300 font-medium">{value}</span>
+                        <span className="text-slate-400 pr-4 break-words">{key}</span>
+                        <span className={`text-slate-300 font-medium col-start-2 justify-self-end ${value === 'undefined' ? 'text-slate-500 italic' : ''}`}>
+                          {value}
+                        </span>
                       </motion.div>
-                    ))}
-                  </div>
+                    )
+                  )}
                 </div>
               </div>
             </div>

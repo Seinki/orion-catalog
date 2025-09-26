@@ -24,10 +24,12 @@ function App() {
 
   const handlePageChange = (page: string) => {
     setCurrentPage(page as PageType);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   const handleExploreProducts = () => {
     setCurrentPage("products");
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   const showNotification = (
