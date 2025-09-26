@@ -113,7 +113,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
     {/* About Section */}
     <section className="py-16 bg-slate-900 border-t border-slate-800">
       <div className="container mx-auto px-4 max-w-5xl flex flex-col md:flex-row items-center gap-10">
-  <img src={ceoImg} alt="CEO" className="w-48 h-48 rounded-full object-cover border-4 border-cyan-400/30 shadow-lg mb-6 md:mb-0" />
+  <img src="https://ui-avatars.com/api/?name=CEO+Orion&background=0D8ABC&color=fff&size=256" alt="CEO" className="w-48 h-48 rounded-full object-cover border-4 border-cyan-400/30 shadow-lg mb-6 md:mb-0" />
         <div>
           <h2 className="text-3xl font-bold text-white mb-4">About Us</h2>
           <p className="text-slate-400 mb-2">Orion+ didirikan oleh <span className="font-semibold text-cyan-400">John Doe</span>, seorang visioner di bidang teknologi smart home.</p>

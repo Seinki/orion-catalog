@@ -7,6 +7,7 @@ import { Navbar } from "./components/Navbar";
 import { NotificationToast } from "./components/NotificationToast";
 import { ProductsPage } from "./components/ProductsPage";
 import { SupportPage } from "./components/SupportPage";
+import Footer from "./components/Footer";
 
 type PageType = "home" | "products" | "support" | "contact";
 
@@ -88,26 +89,7 @@ function App() {
       />
 
       {/* Footer */}
-      <footer className="bg-slate-800/50 border-t border-slate-700/50 py-8 mt-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">L</span>
-              </div>
-              <div>
-                <h3 className="text-white font-bold text-lg">Orion+</h3>
-              </div>
-            </div>
-            <p className="text-slate-400 mb-4">
-              Integrasi Cerdas untuk Hunian Masa Depan
-            </p>
-            <p className="text-slate-500 text-sm">
-              © 2025 Orion+. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
