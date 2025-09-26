@@ -1,7 +1,6 @@
 
 import { Link } from "react-router-dom";
 import heroImg from "../assets/Orion-Pro-HQ-German-Quality.png";
-import ceoImg from "../assets/ceo-placeholder.jpg";
 import logo1 from "../assets/orion-logo.png";
 import logo2 from "../assets/orion-logo1.png";
 import logo3 from "../assets/Orion-Pro-HQ-German-Quality.png";
@@ -13,9 +12,10 @@ import product4 from "../assets/orionProduct-photos/product15.png";
 
 type HeroProps = {
   onExploreProducts: () => void;
+  onCollectionCardClick?: () => void;
 };
 
-export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
+export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onCollectionCardClick }) => {
   const featureIcons = [
     { icon: FiShield, text: "Keamanan Terjamin", color: "text-cyan-400", desc: "Sistem smart home kami mengutamakan keamanan data dan perangkat Anda." },
     { icon: FiWifi, text: "Koneksi Stabil", color: "text-blue-400", desc: "Teknologi WiFi terbaru untuk koneksi perangkat yang selalu stabil dan responsif." },
@@ -164,9 +164,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
                 desc: "Sensor pintar dan fitur otomatisasi untuk keamanan dan kenyamanan."
               }
             ].map((item, idx) => (
-              <Link
+              <button
                 key={idx}
-                to="/products"
+                type="button"
+                onClick={onCollectionCardClick}
                 className="group relative block rounded-xl overflow-hidden shadow-lg border border-slate-700 bg-slate-800 transition-transform duration-200 hover:scale-[1.03] focus:outline-none"
                 style={{ aspectRatio: '1/1' }}
               >
@@ -183,7 +184,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts }) => {
                   <p className="text-slate-200 text-sm drop-shadow-lg">{item.desc}</p>
                 </div>
                 <span className="absolute inset-0" aria-hidden="true" />
-              </Link>
+              </button>
             ))}
           </div>
       </div>

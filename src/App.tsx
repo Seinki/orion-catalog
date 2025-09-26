@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 
 type PageType = "home" | "products" | "support" | "contact";
 
+
 function App() {
   const [currentPage, setCurrentPage] = React.useState<PageType>("home");
   const [notification, setNotification] = React.useState<{
@@ -23,13 +24,28 @@ function App() {
     isVisible: false,
   });
 
-  const handlePageChange = (page: string) => {
-    setCurrentPage(page as PageType);
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  // SPA-friendly scroll to #products after page switch
+  const scrollToProductsSection = () => {
+    setTimeout(() => {
+      const el = document.getElementById("products");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
+  // Handler for Explore Our Collections and CTA
   const handleExploreProducts = () => {
-    setCurrentPage("products");
+    if (currentPage !== "products") {
+      setCurrentPage("products");
+      setTimeout(scrollToProductsSection, 300); // wait for page transition
+    } else {
+      scrollToProductsSection();
+    }
+  };
+
+  const handlePageChange = (page: string) => {
+    setCurrentPage(page as PageType);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
@@ -47,7 +63,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case "home":
-        return <Hero onExploreProducts={handleExploreProducts} />;
+        return <Hero onExploreProducts={handleExploreProducts} onCollectionCardClick={handleExploreProducts} />;
       case "products":
         return <ProductsPage />;
       case "support":
@@ -55,7 +71,7 @@ function App() {
       case "contact":
         return <ContactPage />;
       default:
-        return <Hero onExploreProducts={handleExploreProducts} />;
+        return <Hero onExploreProducts={handleExploreProducts} onCollectionCardClick={handleExploreProducts} />;
     }
   };
 
