@@ -6,12 +6,15 @@ import { ProductCard } from './ProductCard';
 import { ProductModal } from './ProductModal';
 import { Product } from '../types';
 
+
 export const ProductsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = React.useState<string>('all');
   const [selectedProduct, setSelectedProduct] = React.useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [showCategory, setShowCategory] = React.useState(false);
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const PRODUCTS_PER_PAGE = 12;
 
   const filteredProducts = products.filter(product => {
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
@@ -21,6 +24,13 @@ export const ProductsPage: React.FC = () => {
       product.features.some(f => f.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
+
+  // Pagination logic
+  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+  const paginatedProducts = filteredProducts.slice(
+    (currentPage - 1) * PRODUCTS_PER_PAGE,
+    currentPage * PRODUCTS_PER_PAGE
+  );
 
   const handleViewDetails = (product: Product) => {
     setSelectedProduct(product);
@@ -43,6 +53,11 @@ export const ProductsPage: React.FC = () => {
     document.addEventListener('mousedown', handleClick);
     return () => document.removeEventListener('mousedown', handleClick);
   }, [showCategory]);
+
+  // Reset to page 1 if filter/search changes
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchQuery]);
 
   return (
     <div id="products" className="min-h-screen bg-slate-900 pt-20">
@@ -109,6 +124,7 @@ export const ProductsPage: React.FC = () => {
           />
         </motion.div>
 
+
         {/* Products Grid */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -116,7 +132,7 @@ export const ProductsPage: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
         >
-          {filteredProducts.map((product, index) => (
+          {paginatedProducts.map((product, index) => (
             <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 30 }}
@@ -130,6 +146,41 @@ export const ProductsPage: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex justify-center mt-10">
+            <nav className="inline-flex items-center space-x-1 rounded-lg bg-slate-800/70 px-4 py-2 border border-slate-700">
+              <button
+                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                className={`px-3 py-1 rounded-md font-medium text-slate-300 hover:bg-slate-700 transition disabled:opacity-40`}
+              >
+                &lt;
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => setCurrentPage(page)}
+                  className={`px-3 py-1 rounded-md font-medium transition-all duration-150 ${
+                    currentPage === page
+                      ? 'bg-cyan-400 text-slate-900 shadow'
+                      : 'text-slate-300 hover:bg-slate-700'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+              <button
+                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+                className={`px-3 py-1 rounded-md font-medium text-slate-300 hover:bg-slate-700 transition disabled:opacity-40`}
+              >
+                &gt;
+              </button>
+            </nav>
+          </div>
+        )}
 
         {/* No Products Message */}
         {filteredProducts.length === 0 && (
