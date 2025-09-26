@@ -1,7 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiFilter } from 'react-icons/fi';
-import { products, categories } from '../data/products';
+import { products } from '../data/products';
+// Mapping kategori manusiawi berdasarkan kata kunci pada nama produk
+const humanCategories = [
+  { key: 'Switch', label: 'Saklar Pintar' },
+  { key: 'Socket', label: 'Stop Kontak Pintar' },
+  { key: 'Control Center', label: 'Panel Kontrol' },
+  { key: 'Panel', label: 'Panel Kontrol' },
+  { key: 'Gateway', label: 'Gateway Zigbee/WiFi' },
+  { key: 'Camera', label: 'Kamera & CCTV' },
+  { key: 'IP camera', label: 'Kamera & CCTV' },
+  { key: 'Lock', label: 'Kunci Pintu Pintar' },
+  { key: 'Curtain', label: 'Motor Tirai' },
+  { key: 'Light', label: 'Lampu & Strip LED' },
+  { key: 'LED', label: 'Lampu & Strip LED' },
+  { key: 'Sensor', label: 'Sensor' },
+  { key: 'Doorbell', label: 'Bel Pintu Pintar' },
+  { key: 'Repeater', label: 'Sensor' },
+  { key: 'Gas', label: 'Sensor' },
+  { key: 'Smoke', label: 'Sensor' },
+];
+
+function getHumanCategory(productName: string): string {
+  for (const { key, label } of humanCategories) {
+    if (productName.toLowerCase().includes(key.toLowerCase())) {
+      return label;
+    }
+  }
+  return 'Lainnya';
+}
+
+// Dapatkan daftar kategori manusiawi unik dari semua produk
+const allHumanCategories = Array.from(
+  new Set(products.map(p => getHumanCategory(p.name)))
+);
 import { ProductCard } from './ProductCard';
 import { ProductModal } from './ProductModal';
 import { Product } from '../types';
@@ -17,7 +50,8 @@ export const ProductsPage: React.FC = () => {
   const PRODUCTS_PER_PAGE = 12;
 
   const filteredProducts = products.filter(product => {
-    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
+    const humanCat = getHumanCategory(product.name);
+    const matchesCategory = selectedCategory === 'all' || humanCat === selectedCategory;
     const matchesSearch =
       product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       product.model.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -103,7 +137,7 @@ export const ProductsPage: React.FC = () => {
                 >
                   Semua Produk
                 </button>
-                {categories.map(category => (
+                {allHumanCategories.map(category => (
                   <button
                     key={category}
                     onClick={() => { setSelectedCategory(category); setShowCategory(false); }}
