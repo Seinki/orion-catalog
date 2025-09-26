@@ -16,6 +16,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
   onClose,
 }) => {
   const [isAdded, setIsAdded] = React.useState(false);
+  const [currentImage, setCurrentImage] = React.useState(0);
   const { addItem } = useCartStore();
 
   if (!product) return null;
@@ -53,19 +54,47 @@ export const ProductModal: React.FC<ProductModalProps> = ({
             </button>
 
             <div className="grid md:grid-cols-2 gap-8 p-8">
-              {/* Product Image */}
-              <div className="relative">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-80 md:h-96 object-cover rounded-xl"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 text-sm font-medium bg-cyan-400/20 text-cyan-400 rounded-full border border-cyan-400/30 backdrop-blur-sm">
-                    {product.category}
-                  </span>
+              {/* Product Images Slider */}
+              <div className="relative flex flex-col items-center">
+                <div className="relative w-full h-80 md:h-96 flex items-center justify-center">
+                  <button
+                    onClick={() => setCurrentImage((prev) => (prev === 0 ? product.images.length - 1 : prev - 1))}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-slate-700/60 hover:bg-slate-700 text-white rounded-full"
+                    aria-label="Gambar sebelumnya"
+                  >
+                    &#8592;
+                  </button>
+                  <img
+                    src={product.images[currentImage]}
+                    alt={product.name}
+                    className="w-full h-80 md:h-96 object-cover rounded-xl transition-all duration-300"
+                  />
+                  <button
+                    onClick={() => setCurrentImage((prev) => (prev === product.images.length - 1 ? 0 : prev + 1))}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-slate-700/60 hover:bg-slate-700 text-white rounded-full"
+                    aria-label="Gambar berikutnya"
+                  >
+                    &#8594;
+                  </button>
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 text-sm font-medium bg-cyan-400/20 text-cyan-400 rounded-full border border-cyan-400/30 backdrop-blur-sm">
+                      {product.category}
+                    </span>
+                  </div>
+                </div>
+                {/* Dots indicator */}
+                <div className="flex space-x-2 mt-2">
+                  {product.images.map((_, idx) => (
+                    <span
+                      key={idx}
+                      className={`w-3 h-3 rounded-full ${currentImage === idx ? 'bg-cyan-400' : 'bg-slate-500'}`}
+                    />
+                  ))}
                 </div>
               </div>
+  {/* // ...existing code...
+  // Tambahkan state untuk slider gambar
+  const [currentImage, setCurrentImage] = React.useState(0); */}
 
               {/* Product Details */}
               <div className="space-y-6">

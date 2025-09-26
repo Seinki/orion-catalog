@@ -33,7 +33,10 @@ export const products: Product[] = [
       "Operating Temperature": "-25 °C +60 °C",
       "Relative Humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HS",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HS",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HS-2"
+    ],
   },
   {
     id: "L8-HS4",
@@ -65,7 +68,10 @@ export const products: Product[] = [
       "Operating Temperature": "-25 °C +60 °C",
       "Relative Humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HS4",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HS4",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HS4-2"
+    ],
   },
   {
     id: "L8-HD",
@@ -97,7 +103,10 @@ export const products: Product[] = [
       "Operating Temperature": "-25 °C +60 °C",
       "Relative Humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HD",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HD",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HD-2"
+    ],
   },
   // Smart Sockets
   {
@@ -130,7 +139,10 @@ export const products: Product[] = [
       "Operating Temperature": "-25 °C +60 °C",
       "Relative Humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HB",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HB",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HB"
+    ],
   },
   {
     id: "L8-HLS",
@@ -162,7 +174,10 @@ export const products: Product[] = [
       "Operating Temperature": "-25 °C +60 °C",
       "Relative Humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HLS",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HLS",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HLS"
+    ],
   },
   // Control Center
   {
@@ -194,7 +209,10 @@ export const products: Product[] = [
       "Operating Temperature": "-25 °C +60 °C",
       "Relative Humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HAK/L8-HAKU",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HAK/L8-HAKU",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HAK/L8-HAKU"
+    ],
   },
   {
     id: "L8-HF",
@@ -225,7 +243,10 @@ export const products: Product[] = [
       "Operating Temperature": "-25 °C +60 °C",
       "Relative Humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HF",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HF",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HF"
+    ],
   },
   // Security & Sensors
   {
@@ -258,7 +279,10 @@ export const products: Product[] = [
       "Operating Temperature": "-25 °C +60 °C",
       "Relative Humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HA/L8-HAU",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HA/L8-HAU",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HA/L8-HAU"
+    ],
   },
   {
     id: "L8-HP4",
@@ -287,7 +311,10 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
       "Other Functions": "Tuya Zigbee Geteway",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HP4",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HP4",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HP4"
+    ],
   },
   // Smart Lighting
   {
@@ -317,7 +344,10 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
       "Other Functions": "Tuya Zigbee Geteway",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HP7",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HP7",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HP7"
+    ],
   },
   {
     id: "LA-HGZ",
@@ -341,7 +371,10 @@ export const products: Product[] = [
       "Wireless technology": "2 4G Wi-Fi | Zigbee 3.0",
       "Net weight": "35g",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-HGZ",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HGZ",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HGZ"
+    ],
   },
   // Automation
   {
@@ -374,7 +407,10 @@ export const products: Product[] = [
       "Operating Temperature": "-25 °C +60 °C",
       "Relative Humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-H0CU",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-H0CU",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-H0CU"
+    ],
   },
   {
     id: "LA-H0U2",
@@ -402,7 +438,10 @@ export const products: Product[] = [
       "Operating Temperature": "-25 °C +60 °C",
       "Relative Humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-H0U2",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-H0U2",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-H0U2"
+    ],
   },
   {
     id: "LA-HOP2",
@@ -433,7 +472,10 @@ export const products: Product[] = [
       "Operating temperature": "-25 °C +60 °C",
       "Relative humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-HOP2",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HOP2",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HOP2"
+    ],
   },
   {
     id: "LA-HOB2",
@@ -464,7 +506,10 @@ export const products: Product[] = [
       "Operating temperature": "-25 °C +60 °C",
       "Relative humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-HOB2",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HOB2",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HOB2"
+    ],
   },
   {
     id: "LA-AC1",
@@ -493,7 +538,10 @@ export const products: Product[] = [
       "Protection leve": "IP66",
       Size: "180mm*66mm*56mm",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-AC1",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC1",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC1"
+    ],
   },
   {
     id: "LA-AC3",
@@ -524,7 +572,10 @@ export const products: Product[] = [
       "Lens Focal Length": "Fixed focal length",
       "Wireless Standards": "IEEE 802.11b/g/n",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-AC3",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC3",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC3"
+    ],
   },
   {
     id: "LA-AC8",
@@ -555,7 +606,10 @@ export const products: Product[] = [
       "Lens Focal Length": "Fixed focal length",
       "Wireless Standards": "IEEE 802.11b/g/n",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-AC8",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC8",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC8"
+    ],
   },
   {
     id: "L8-HK1",
@@ -584,7 +638,10 @@ export const products: Product[] = [
       Function: "Fingerprint/Password/Smart living App/lnduction/Key",
       "Password length": "6-8 bits, 16-bit garbled function",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HK1",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK1",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK1"
+    ],
   },
   {
     id: "L8-HK5",
@@ -612,7 +669,10 @@ export const products: Product[] = [
       Function: "Fingerprint/Password/Smart living App/lnduction/Key",
       "Password length": "6-8 bits, 16-bit garbled function",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HK5",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK5",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK5"
+    ],
   },
   {
     id: "L8-HK6",
@@ -643,7 +703,10 @@ export const products: Product[] = [
       Size: "20-85%",
       Battery: "AAA1.5VX2",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L8-HK6",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK6",
+      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK6"
+    ],
   },
   {
     id: "L2-HCC3",
@@ -663,7 +726,10 @@ export const products: Product[] = [
     specifications: {
       undefined: "Tidak ada spesifikasi",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L2-HCC3",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L2-HCC3",
+      "https://placehold.co/400x300/112240/64FFDA?text=L2-HCC3"
+    ],
   },
   {
     id: "L2-HCL3",
@@ -683,7 +749,10 @@ export const products: Product[] = [
     specifications: {
       undefined: "Tidak ada spesifikasi",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=L2-HCL3",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=L2-HCL3",
+      "https://placehold.co/400x300/112240/64FFDA?text=L2-HCL3"
+    ],
   },
   {
     id: "undefined",
@@ -713,7 +782,10 @@ export const products: Product[] = [
       "Operating temperature": "-25 °C +60 °C",
       "Relative humidity": "<95%",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-HSP10",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HSP10",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HSP10"
+    ],
   },
   {
     id: "LA-HL15",
@@ -743,7 +815,10 @@ export const products: Product[] = [
       "PCB Width": "45.8MM",
       "Material of PcB": "1.0MM Aluminum PCB",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-HL15",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HL15",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HL15"
+    ],
   },
   {
     id: "LA-AM1",
@@ -775,7 +850,10 @@ export const products: Product[] = [
       Size: "20-85%",
       Battery: "AAA1.5VX2",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-AM1",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AM1",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AM1"
+    ],
   },
   {
     id: "LA-AD1",
@@ -805,7 +883,10 @@ export const products: Product[] = [
       "Working humidity": "max 95 % RH",
       Size: "25mm*70mm",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-AD1",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AD1",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AD1"
+    ],
   },
   {
     id: "LA-HVD",
@@ -835,7 +916,10 @@ export const products: Product[] = [
       "Working humidity": "max 95 % RH",
       Size: "52mm*35mm*135mm",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-HVD",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HVD",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HVD"
+    ],
   },
   {
     id: "LA-HIR",
@@ -869,7 +953,10 @@ export const products: Product[] = [
       "Voice support": "Amazon/Google/Siri",
       "Packing list": "Host/data cable/instructions",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-HIR",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HIR",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-HIR"
+    ],
   },
   {
     id: "LA-AG1",
@@ -898,7 +985,10 @@ export const products: Product[] = [
       "Working frequency": "2.405~2.480GHz",
       "Working Humidity": "Max 95%RH",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-AG1",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AG1",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AG1"
+    ],
   },
   {
     id: "LA-AS1",
@@ -930,7 +1020,10 @@ export const products: Product[] = [
       "Operating temperature": "-10°C~+50°C",
       "Operating humidity": "Maximum 95%RH",
     },
-    image: "https://placehold.co/400x300/112240/64FFDA?text=LA-AS1",
+    images: [
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AS1",
+      "https://placehold.co/400x300/112240/64FFDA?text=LA-AS1"
+    ],
   },
 ];
 
