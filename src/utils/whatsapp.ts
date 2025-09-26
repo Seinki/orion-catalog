@@ -1,8 +1,8 @@
 import { CartItem } from '../types';
 
-export const generateWhatsAppMessage = (items: CartItem[], totalPrice: number): string => {
+export const generateWhatsAppMessage = (items: CartItem[]): string => {
   const productList = items.map(item => 
-    `- ${item.name} (Model: ${item.model}) - ${item.quantity} pcs @ $${item.price}`
+    `- ${item.name} (Model: ${item.model}) - ${item.quantity} pcs`
   ).join('\n');
 
   return `Halo LANBON Smart Home,
@@ -10,8 +10,6 @@ export const generateWhatsAppMessage = (items: CartItem[], totalPrice: number): 
 Saya tertarik untuk memesan produk berikut dari website Anda:
 
 ${productList}
-
-Total Pesanan: $${totalPrice}
 
 Mohon informasinya untuk ketersediaan stok dan langkah selanjutnya. Terima kasih.`;
 };

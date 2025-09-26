@@ -78,14 +78,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails
           </div>
         </div>
 
-        {/* Price & Add to Cart */}
-        <div className="flex items-center justify-between">
-          <div>
-            <span className="text-2xl font-bold text-cyan-400">
-              ${product.price}
-            </span>
-          </div>
-          
+        {/* Add to Cart */}
+        <div className="flex items-center justify-end">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

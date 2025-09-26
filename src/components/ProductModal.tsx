@@ -79,11 +79,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                   </p>
                 </div>
 
-                {/* Price */}
                 <div className="flex items-center space-x-4">
-                  <span className="text-4xl font-bold text-cyan-400">
-                    ${product.price}
-                  </span>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

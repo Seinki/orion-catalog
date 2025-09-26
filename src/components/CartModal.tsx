@@ -12,13 +12,13 @@ export const CartModal: React.FC = () => {
     updateQuantity,
     removeItem,
     clearCart,
-    getTotalPrice
+  // getTotalPrice
   } = useCartStore();
 
-  const totalPrice = getTotalPrice();
+
 
   const handleWhatsAppOrder = () => {
-    const message = generateWhatsAppMessage(items, totalPrice);
+    const message = generateWhatsAppMessage(items);
     openWhatsApp(message);
   };
 
@@ -91,7 +91,7 @@ export const CartModal: React.FC = () => {
                       <div className="flex-1 min-w-0">
                         <h3 className="font-medium text-white truncate">{item.name}</h3>
                         <p className="text-sm text-slate-400">{item.model}</p>
-                        <p className="text-sm font-medium text-cyan-400">${item.price}</p>
+
                       </div>
 
                       <div className="flex items-center space-x-2">
@@ -131,7 +131,7 @@ export const CartModal: React.FC = () => {
               <div className="p-6 border-t border-slate-700">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-lg font-medium text-white">Total:</span>
-                  <span className="text-2xl font-bold text-cyan-400">${totalPrice}</span>
+                  <span className="text-base font-medium text-slate-400 italic">Hubungi Admin</span>
                 </div>
                 
                 <motion.button

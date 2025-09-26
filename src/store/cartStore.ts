@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { CartStore, Product, CartItem } from '../types';
+import { CartStore, Product } from '../types';
 
 export const useCartStore = create<CartStore>()(
   persist(
@@ -54,7 +54,7 @@ export const useCartStore = create<CartStore>()(
       toggleCart: () => set((state) => ({ isOpen: !state.isOpen })),
       
       getTotalPrice: () => {
-        return get().items.reduce((total, item) => total + (item.price * item.quantity), 0);
+        return 0;
       },
       
       getTotalItems: () => {
