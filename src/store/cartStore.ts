@@ -62,7 +62,7 @@ export const useCartStore = create<CartStore>()(
       }
     }),
     {
-      name: 'lanbon-cart'
+  name: 'orionplus-cart'
     }
   )
 );

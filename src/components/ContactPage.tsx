@@ -49,7 +49,7 @@ Terima kasih.`;
     {
       icon: FiMail,
       title: "Email",
-      details: "info@lanbonsmart.com",
+  details: "info@orionplus.id",
       subtext: "Respons dalam 24 jam",
     },
     {

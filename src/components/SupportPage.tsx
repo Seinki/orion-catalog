@@ -12,13 +12,13 @@ export const SupportPage: React.FC = () => {
 
   const faqs = [
     {
-      question: "Bagaimana cara mengatur perangkat LANBON untuk pertama kali?",
+      question: "Bagaimana cara mengatur perangkat Orion+ untuk pertama kali?",
       answer:
         "Unduh aplikasi Orion+, buat akun, dan ikuti panduan setup yang disediakan. Pastikan perangkat terhubung ke WiFi yang sama dengan smartphone Anda.",
     },
     {
       question:
-        "Apakah produk LANBON kompatibel dengan Google Assistant dan Alexa?",
+        "Apakah produk Orion+ kompatibel dengan Google Assistant dan Alexa?",
       answer:
         "Ya, semua produk Orion+ mendukung integrasi dengan Google Assistant dan Amazon Alexa. Anda dapat mengontrol perangkat menggunakan perintah suara.",
     },
@@ -29,9 +29,9 @@ export const SupportPage: React.FC = () => {
         "Tekan dan tahan tombol reset pada perangkat selama 10 detik hingga lampu indikator berkedip. Perangkat akan kembali ke mode pairing dan siap untuk dikonfigurasi ulang.",
     },
     {
-      question: "Apakah saya perlu hub khusus untuk menggunakan produk LANBON?",
+      question: "Apakah saya perlu hub khusus untuk menggunakan produk Orion+?",
       answer:
-        "Untuk sebagian besar produk WiFi, Anda tidak memerlukan hub khusus. Namun, untuk produk Zigbee, Anda memerlukan LANBON Control Hub untuk komunikasi optimal.",
+        "Untuk sebagian besar produk WiFi, Anda tidak memerlukan hub khusus. Namun, untuk produk Zigbee, Anda memerlukan Orion+ Control Hub untuk komunikasi optimal.",
     },
     {
       question: "Bagaimana cara memperbarui firmware perangkat?",
@@ -44,13 +44,13 @@ export const SupportPage: React.FC = () => {
     {
       title: "Panduan Setup Awal",
       description:
-        "Langkah-langkah lengkap mengatur perangkat LANBON pertama kali",
+        "Langkah-langkah lengkap mengatur perangkat Orion+ pertama kali",
       icon: FiTool,
       downloadUrl: "#",
     },
     {
       title: "Manual Instalasi Switch",
-      description: "Panduan instalasi untuk semua jenis smart switch LANBON",
+      description: "Panduan instalasi untuk semua jenis smart switch Orion+",
       icon: FiDownload,
       downloadUrl: "#",
     },

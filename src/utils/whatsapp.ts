@@ -5,7 +5,7 @@ export const generateWhatsAppMessage = (items: CartItem[]): string => {
     `- ${item.name} (Model: ${item.model}) - ${item.quantity} pcs`
   ).join('\n');
 
-  return `Halo LANBON Smart Home,
+  return `Halo Orion+ Smart Home,
 
 Saya tertarik untuk memesan produk berikut dari website Anda:
 

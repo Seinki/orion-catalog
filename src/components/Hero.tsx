@@ -47,11 +47,20 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onCollectionCardC
                   </span>
                 </h1>
                 <p className="text-base md:text-xl text-slate-400 mb-6 md:mb-8 max-w-xl leading-relaxed mx-auto md:mx-0">
-                  Integrasi Cerdas untuk Hunian Masa Depan
+                  <span className="relative inline-block">
+                    <span className="bg-gradient-to-r from-cyan-400/80 via-blue-400/70 to-cyan-300/80 bg-clip-text text-transparent font-semibold drop-shadow-lg">
+                      Integrasi Cerdas untuk Hunian Masa Depan
+                    </span>
+                    <span className="absolute left-0 right-0 -bottom-1 h-1 bg-gradient-to-r from-cyan-400/40 via-blue-400/30 to-cyan-300/40 rounded-full blur-sm opacity-80" />
+                  </span>
+                  <br />
+                  <span className="text-xs md:text-sm text-cyan-400/80 italic font-light tracking-wide block mt-2 animate-pulse">
+                    Smart. Connected. Effortless.
+                  </span>
                 </p>
               </div>
               {/* Feature Icons */}
-              <div className="flex flex-row flex-wrap justify-center md:justify-start gap-4 md:gap-6 mb-8 w-full">
+              {/* <div className="flex flex-row flex-wrap justify-center md:justify-start gap-4 md:gap-6 mb-8 w-full">
                 {featureIcons.map((feature, index) => (
                   <div
                     key={index}
@@ -63,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onCollectionCardC
                     </span>
                   </div>
                 ))}
-              </div>
+              </div> */}
               {/* CTA Button */}
               <button
                 onClick={onExploreProducts}
@@ -79,9 +88,13 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onCollectionCardC
             </div>
             {/* Kanan: Hero Image */}
             <div className="flex-1 flex justify-center md:justify-end items-center mb-10 md:mb-0">
-              <img
+              <motion.img
                 src={heroImg}
                 alt="Orion Smart Home Hero"
+                initial={{ scale: 1, opacity: 0 }}
+                animate={{ scale: 1.08, opacity: 1 }}
+                transition={{ duration: 1.2, ease: 'easeOut' }}
+                whileHover={{ scale: 1.13 }}
                 className="w-[260px] sm:w-[320px] md:w-[500px] lg:w-[580px] rounded-3xl shadow-2xl border-4 border-cyan-400/30 bg-slate-900/40 object-cover"
                 style={{ boxShadow: "0 8px 40px 0 rgba(0,255,255,0.10)" }}
               />
@@ -193,3 +206,4 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onCollectionCardC
   );
 };
 import { FiArrowRight, FiShield, FiWifi, FiZap } from 'react-icons/fi';
+import { motion } from 'framer-motion';
