@@ -33,7 +33,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails
       {/* Product Image */}
       <div className="relative h-48 overflow-hidden">
         <img
-          src={product.image}
+          src={product.images[0]}
           alt={product.name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />

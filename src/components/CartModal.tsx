@@ -83,7 +83,7 @@ export const CartModal: React.FC = () => {
                       className="flex items-center space-x-4 p-4 bg-slate-700/30 rounded-xl"
                     >
                       <img
-                        src={item.image}
+                        src={item.images[0]}
                         alt={item.name}
                         className="w-16 h-16 object-cover rounded-lg"
                       />

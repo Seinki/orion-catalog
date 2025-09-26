@@ -1,5 +1,65 @@
 // import { Weight } from "lucide-react";
 import { Product } from "../types";
+import product1 from "../assets/orionProduct-photos/product1.png";
+import product1_ from "../assets/orionProduct-photos/product1_.png";
+import product2 from "../assets/orionProduct-photos/product2.png";
+import product2_ from "../assets/orionProduct-photos/product2_.png";
+import product3 from "../assets/orionProduct-photos/product3.png";
+import product3_ from "../assets/orionProduct-photos/product3_.png";
+import product4 from "../assets/orionProduct-photos/product4.png";
+import product4_ from "../assets/orionProduct-photos/product4_.png";
+import product5 from "../assets/orionProduct-photos/product5.png";
+import product5_ from "../assets/orionProduct-photos/product5_.png";
+import product6 from "../assets/orionProduct-photos/product6.png";
+import product6_ from "../assets/orionProduct-photos/product6_.png";
+import product7 from "../assets/orionProduct-photos/product7.png";
+import product7_ from "../assets/orionProduct-photos/product7_.png";
+import product8 from "../assets/orionProduct-photos/product8.png";
+import product8_ from "../assets/orionProduct-photos/product8_.png";
+import product9 from "../assets/orionProduct-photos/product9.png";
+import product9_ from "../assets/orionProduct-photos/product9_.png";
+import product10 from "../assets/orionProduct-photos/product10.png";
+import product10_ from "../assets/orionProduct-photos/product10_.png";
+import product11 from "../assets/orionProduct-photos/product11.png";
+import product11_ from "../assets/orionProduct-photos/product11_.png";
+import product12 from "../assets/orionProduct-photos/product12.png";
+import product12_ from "../assets/orionProduct-photos/product12_.png";
+import product13 from "../assets/orionProduct-photos/product13.png";
+import product13_ from "../assets/orionProduct-photos/product13_.png";
+import product14 from "../assets/orionProduct-photos/product14.png";
+import product14_ from "../assets/orionProduct-photos/product14_.png";
+import product15 from "../assets/orionProduct-photos/product15.png";
+import product15_ from "../assets/orionProduct-photos/product15_.png";
+import product16 from "../assets/orionProduct-photos/product16.png";
+import product16_ from "../assets/orionProduct-photos/product16_.png";
+import product17 from "../assets/orionProduct-photos/product17.png";
+import product17_ from "../assets/orionProduct-photos/product17_.png";
+import product18 from "../assets/orionProduct-photos/product18.png";
+import product18_ from "../assets/orionProduct-photos/product18_.png";
+import product19 from "../assets/orionProduct-photos/product19.png";
+import product19_ from "../assets/orionProduct-photos/product19_.png";
+import product20 from "../assets/orionProduct-photos/product20.png";
+import product20_ from "../assets/orionProduct-photos/product20_.png";
+import product21 from "../assets/orionProduct-photos/product21.png";
+import product21_ from "../assets/orionProduct-photos/product21_.png";
+import product22 from "../assets/orionProduct-photos/product22.png";
+import product23 from "../assets/orionProduct-photos/product23.png";
+import product24 from "../assets/orionProduct-photos/product24.png";
+import product24_ from "../assets/orionProduct-photos/product24_.png";
+import product25 from "../assets/orionProduct-photos/product25.png";
+import product25_ from "../assets/orionProduct-photos/product25_.png";
+import product26 from "../assets/orionProduct-photos/product26.png";
+import product26_ from "../assets/orionProduct-photos/product26_.png";
+import product27 from "../assets/orionProduct-photos/product27.png";
+import product27_ from "../assets/orionProduct-photos/product27_.png";
+import product28 from "../assets/orionProduct-photos/product28.png";
+import product28_ from "../assets/orionProduct-photos/product28_.png";
+import product29 from "../assets/orionProduct-photos/product29.png";
+import product29_ from "../assets/orionProduct-photos/product29_.png";
+import product30 from "../assets/orionProduct-photos/product30.png";
+import product30_ from "../assets/orionProduct-photos/product30_.png";
+import product31 from "../assets/orionProduct-photos/product31.png";
+import product31_ from "../assets/orionProduct-photos/product31_.png";
 
 export const products: Product[] = [
   // Smart Switches
@@ -34,8 +94,8 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HS",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HS-2"
+      product1,
+      product1_
     ],
   },
   {
@@ -69,8 +129,8 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HS4",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HS4-2"
+      product2,
+      product2_
     ],
   },
   {
@@ -104,8 +164,8 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HD",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HD-2"
+      product3,
+      product3_
     ],
   },
   // Smart Sockets
@@ -140,8 +200,8 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HB",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HB"
+      product4,
+      product4_
     ],
   },
   {
@@ -175,8 +235,8 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HLS",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HLS"
+      product5,
+      product5_
     ],
   },
   // Control Center
@@ -210,8 +270,8 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HAK/L8-HAKU",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HAK/L8-HAKU"
+      product6,
+      product6_
     ],
   },
   {
@@ -244,8 +304,8 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HF",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HF"
+      product7,
+      product7_
     ],
   },
   // Security & Sensors
@@ -280,8 +340,8 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HA/L8-HAU",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HA/L8-HAU"
+      product8,
+      product8_
     ],
   },
   {
@@ -312,8 +372,8 @@ export const products: Product[] = [
       "Other Functions": "Tuya Zigbee Geteway",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HP4",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HP4"
+      product9,
+      product9_
     ],
   },
   // Smart Lighting
@@ -345,8 +405,8 @@ export const products: Product[] = [
       "Other Functions": "Tuya Zigbee Geteway",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HP7",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HP7"
+      product10,
+      product10_
     ],
   },
   {
@@ -372,8 +432,8 @@ export const products: Product[] = [
       "Net weight": "35g",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HGZ",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HGZ"
+      product11,
+      product11_
     ],
   },
   // Automation
@@ -408,8 +468,8 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-H0CU",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-H0CU"
+      product12,
+      product12_
     ],
   },
   {
@@ -439,8 +499,8 @@ export const products: Product[] = [
       "Relative Humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-H0U2",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-H0U2"
+      product13,
+      product13_
     ],
   },
   {
@@ -473,8 +533,8 @@ export const products: Product[] = [
       "Relative humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HOP2",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HOP2"
+      product14,
+      product14_
     ],
   },
   {
@@ -507,8 +567,8 @@ export const products: Product[] = [
       "Relative humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HOB2",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HOB2"
+      product15,
+      product15_
     ],
   },
   {
@@ -539,8 +599,8 @@ export const products: Product[] = [
       Size: "180mm*66mm*56mm",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC1",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC1"
+      product16,
+      product16_
     ],
   },
   {
@@ -573,8 +633,8 @@ export const products: Product[] = [
       "Wireless Standards": "IEEE 802.11b/g/n",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC3",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC3"
+      product17,
+      product17_
     ],
   },
   {
@@ -607,8 +667,8 @@ export const products: Product[] = [
       "Wireless Standards": "IEEE 802.11b/g/n",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC8",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AC8"
+      product18,
+      product18_
     ],
   },
   {
@@ -639,8 +699,8 @@ export const products: Product[] = [
       "Password length": "6-8 bits, 16-bit garbled function",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK1",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK1"
+      product19,
+      product19_
     ],
   },
   {
@@ -670,8 +730,8 @@ export const products: Product[] = [
       "Password length": "6-8 bits, 16-bit garbled function",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK5",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK5"
+      product20,
+      product20_
     ],
   },
   {
@@ -704,8 +764,8 @@ export const products: Product[] = [
       Battery: "AAA1.5VX2",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK6",
-      "https://placehold.co/400x300/112240/64FFDA?text=L8-HK6"
+      product21,
+      product21_
     ],
   },
   {
@@ -727,8 +787,8 @@ export const products: Product[] = [
       undefined: "Tidak ada spesifikasi",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L2-HCC3",
-      "https://placehold.co/400x300/112240/64FFDA?text=L2-HCC3"
+      product22,
+      product22
     ],
   },
   {
@@ -750,8 +810,8 @@ export const products: Product[] = [
       undefined: "Tidak ada spesifikasi",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=L2-HCL3",
-      "https://placehold.co/400x300/112240/64FFDA?text=L2-HCL3"
+      product23,
+      product23
     ],
   },
   {
@@ -783,8 +843,8 @@ export const products: Product[] = [
       "Relative humidity": "<95%",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HSP10",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HSP10"
+      product24,
+      product24_
     ],
   },
   {
@@ -816,8 +876,8 @@ export const products: Product[] = [
       "Material of PcB": "1.0MM Aluminum PCB",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HL15",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HL15"
+      product25,
+      product25_
     ],
   },
   {
@@ -851,8 +911,8 @@ export const products: Product[] = [
       Battery: "AAA1.5VX2",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AM1",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AM1"
+      product26,
+      product26_
     ],
   },
   {
@@ -884,8 +944,8 @@ export const products: Product[] = [
       Size: "25mm*70mm",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AD1",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AD1"
+      product27,
+      product27_
     ],
   },
   {
@@ -917,8 +977,8 @@ export const products: Product[] = [
       Size: "52mm*35mm*135mm",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HVD",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HVD"
+      product28,
+      product28_
     ],
   },
   {
@@ -954,8 +1014,8 @@ export const products: Product[] = [
       "Packing list": "Host/data cable/instructions",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HIR",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-HIR"
+      product29,
+      product29_
     ],
   },
   {
@@ -986,8 +1046,8 @@ export const products: Product[] = [
       "Working Humidity": "Max 95%RH",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AG1",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AG1"
+      product30,
+      product30_
     ],
   },
   {
@@ -1021,8 +1081,8 @@ export const products: Product[] = [
       "Operating humidity": "Maximum 95%RH",
     },
     images: [
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AS1",
-      "https://placehold.co/400x300/112240/64FFDA?text=LA-AS1"
+      product31,
+      product31_
     ],
   },
 ];
