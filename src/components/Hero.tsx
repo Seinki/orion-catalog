@@ -134,6 +134,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onExploreProducts, onCollect
           </div>
         </div>
       </section>
+    {/* About Section */}
+    <section className="py-16 bg-slate-900 border-t border-slate-800">
+      <div className="container mx-auto px-4 max-w-4xl text-center">
+        <h2 className="text-3xl font-bold text-white mb-4">About Us</h2>
+        <div className="text-slate-400 text-lg leading-relaxed space-y-4">
+          <p>
+            Di Orion+, kami percaya bahwa teknologi smart home seharusnya tidak hanya canggih, tetapi juga <span className="text-cyan-400 font-medium">mudah diakses dan dapat diandalkan</span> oleh setiap keluarga di Indonesia. Misi kami adalah menyederhanakan kehidupan modern melalui sebuah ekosistem yang terintegrasi penuh.
+          </p>
+          <p>
+            Kami berfokus pada tiga pilar utama: <span className="text-white font-semibold">Keamanan</span> untuk ketenangan pikiran, <span className="text-white font-semibold">Konektivitas</span> yang andal untuk kenyamanan tanpa batas, dan <span className="text-white font-semibold">Efisiensi</span> untuk gaya hidup yang lebih hemat dan berkelanjutan.
+          </p>
+          <p>
+            Lebih dari sekadar produk, kami adalah partner Anda dalam membangun hunian masa depan. Kami berkomitmen untuk menghadirkan solusi cerdas yang benar-benar bekerja untuk Anda, didukung oleh layanan dan inovasi yang berkelanjutan.
+          </p>
+        </div>
+      </div>
+    </section>
     {/* Why Choose Us */}
     <section className="py-16 bg-slate-900 border-t border-slate-800">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -147,18 +164,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onExploreProducts, onCollect
               </div>
             ))}
           </div>
-      </div>
-    </section>
-    {/* About Section */}
-    <section className="py-16 bg-slate-900 border-t border-slate-800">
-      <div className="container mx-auto px-4 max-w-5xl flex flex-col md:flex-row items-center gap-10">
-  <img src="https://ui-avatars.com/api/?name=CEO+Orion&background=0D8ABC&color=fff&size=256" alt="CEO" className="w-48 h-48 rounded-full object-cover border-4 border-cyan-400/30 shadow-lg mb-6 md:mb-0" />
-        <div>
-          <h2 className="text-3xl font-bold text-white mb-4">About Us</h2>
-          <p className="text-slate-400 mb-2">Orion+ didirikan oleh <span className="font-semibold text-cyan-400">John Doe</span>, seorang visioner di bidang teknologi smart home.</p>
-          <p className="text-slate-400 mb-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac neque nec enim dictum cursus. Integer facilisis, urna at dictum cursus, enim elit convallis urna, nec dictum enim elit nec urna."</p>
-          <p className="text-slate-400">Kami berkomitmen menghadirkan solusi hunian cerdas yang aman, nyaman, dan efisien untuk masa depan Anda.</p>
-        </div>
       </div>
     </section>
     {/* Our Client Section */}
