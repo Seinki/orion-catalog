@@ -1,6 +1,6 @@
 import { CartItem } from '../types';
 
-export const WHATSAPP_PHONE_NUMBER = '6281234567890';
+export const WHATSAPP_PHONE_NUMBER = '6282122665587';
 
 export const generateWhatsAppMessage = (items: CartItem[]): string => {
   const productList = items.map(item => 

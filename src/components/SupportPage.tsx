@@ -6,6 +6,7 @@ import {
   FiHelpCircle,
   FiTool,
 } from "react-icons/fi";
+import { openWhatsApp } from "../utils/whatsapp";
 
 export const SupportPage: React.FC = () => {
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
@@ -209,12 +210,7 @@ export const SupportPage: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() =>
-                window.open(
-                  "https://wa.me/6281234567890?text=Halo, saya butuh bantuan dengan produk Orion+",
-                  "_blank"
-                )
-              }
+              onClick={() => openWhatsApp("Halo, saya butuh bantuan dengan produk Orion+")}
               className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300"
             >
               <FiHelpCircle size={20} />

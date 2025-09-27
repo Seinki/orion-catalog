@@ -2,6 +2,7 @@ import orionLogo from '../assets/orionLogo.png';
 import { SlSocialInstagram, SlSocialLinkedin } from "react-icons/sl";
 import { FaTiktok } from 'react-icons/fa';
 
+import { WHATSAPP_PHONE_NUMBER } from '../utils/whatsapp';
 const socialLinks = [
   {
     label: 'Instagram',
@@ -29,7 +30,7 @@ const Footer: React.FC = () => (
         {/* <h3 className="text-2xl font-bold text-white mb-2">Orion+</h3> */}
         <p className="text-slate-400 mb-4 max-w-xs text-center md:text-left">Integrasi Cerdas untuk Hunian Masa Depan. Solusi smart home modern, aman, dan efisien untuk keluarga Indonesia.</p>
         <a
-          href="https://wa.me/6281234567890"
+          href={`https://wa.me/${WHATSAPP_PHONE_NUMBER}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-2 px-6 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold rounded-full shadow transition"
@@ -50,7 +51,7 @@ const Footer: React.FC = () => (
           <span className="font-semibold text-white">Email:</span> <a href="mailto:info@orionplus.id" className="text-cyan-400 hover:underline">info@orionplus.id</a>
         </div>
         <div>
-          <span className="font-semibold text-white">WhatsApp:</span> <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">+62 812-3456-7890</a>
+          <span className="font-semibold text-white">WhatsApp:</span> <a href={`https://wa.me/${WHATSAPP_PHONE_NUMBER}`} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{`+${WHATSAPP_PHONE_NUMBER.slice(0, 2)} ${WHATSAPP_PHONE_NUMBER.slice(2, 5)}-${WHATSAPP_PHONE_NUMBER.slice(5, 9)}-${WHATSAPP_PHONE_NUMBER.slice(9)}`}</a>
         </div>
       </div>
       {/* Social Media */}
