@@ -1,11 +1,11 @@
 
 // import { Link } from "react-router-dom";
-import { FiArrowRight, FiShield, FiWifi, FiZap } from 'react-icons/fi';
+import { FiArrowRight, FiShield, FiUser, FiWifi, FiZap } from 'react-icons/fi';
 import heroImg from "../assets/Orion-Pro-HQ-German-Quality.png";
-import logo1 from "../assets/orion-logo.png";
-import logo2 from "../assets/orion-logo1.png";
-import logo3 from "../assets/Orion-Pro-HQ-German-Quality.png";
-import logo4 from "../assets/Orion-Pro-HQ-German-Quality-1.png";
+import clientLogo1 from "../assets/ourClient/konars.png"; // Ganti dengan path logo asli
+import clientLogo2 from "../assets/ourClient/poluxcabin.png"; // Ganti dengan path logo asli
+// import clientLogo3 from "../assets/ourClient/noxus.png"; // Ganti dengan path logo asli
+import clientLogo4 from "../assets/ourClient/mahaDesign.png"; // Ganti dengan path logo asli
 import product1 from "../assets/orionProduct-photos/product1.png";
 import product2 from "../assets/orionProduct-photos/product5.png";
 import product3 from "../assets/orionProduct-photos/product10.png";
@@ -44,6 +44,13 @@ const collectionItems = [
     title: "Sensor & Automation",
     desc: "Sensor pintar dan fitur otomatisasi untuk keamanan dan kenyamanan."
   }
+];
+
+const clients = [
+  { name: "Konars Design", logo: clientLogo1 },
+  { name: "Polux Cabin", logo: clientLogo2 },
+  { name: "Noxus Construction",  },
+  { name: "Maha Design", logo: clientLogo4 },
 ];
 
 export const HomePage: React.FC<HomePageProps> = ({ onExploreProducts, onCollectionCardClick }) => {
@@ -170,11 +177,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onExploreProducts, onCollect
     <section className="py-16 bg-slate-900 border-t border-slate-800">
       <div className="container mx-auto px-4 max-w-6xl">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Clients</h2>
-        <div className="flex flex-wrap justify-center items-center gap-8">
-          <img src={logo1} alt="Client 1" className="h-16 w-auto grayscale hover:grayscale-0 transition duration-300" />
-          <img src={logo2} alt="Client 2" className="h-16 w-auto grayscale hover:grayscale-0 transition duration-300" />
-          <img src={logo3} alt="Client 3" className="h-16 w-auto grayscale hover:grayscale-0 transition duration-300" />
-          <img src={logo4} alt="Client 4" className="h-16 w-auto grayscale hover:grayscale-0 transition duration-300" />
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+          {clients.map((client, idx) => (
+            <div key={idx} className="flex flex-col items-center gap-3 text-center transition-opacity duration-300 opacity-60 hover:opacity-100">
+              {/* <div className="w-32 h-32 bg-slate-700 rounded-full flex items-center justify-center border-2 border-slate-600">
+                <FiUser className="w-16 h-16 text-slate-400" />
+              </div> */}
+              {client.logo ? (
+                <img src={client.logo} alt={client.name} className="w-32 h-32 object-contain bg-slate-700/50 p-2 rounded-full border-2 border-slate-600" />
+              ) : (
+                <div className="w-32 h-32 bg-slate-700 rounded-full flex items-center justify-center border-2 border-slate-600">
+                  <FiUser className="w-16 h-16 text-slate-400" />
+                </div>
+              )}
+              <span className="text-slate-400 font-medium">{client.name}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

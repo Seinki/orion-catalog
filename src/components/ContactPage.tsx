@@ -6,7 +6,7 @@ import { openWhatsApp, WHATSAPP_PHONE_NUMBER } from "../utils/whatsapp";
 const contactInfo = [
   { icon: FiPhone, title: "Telepon & WhatsApp", details: `+${WHATSAPP_PHONE_NUMBER.slice(0, 2)} ${WHATSAPP_PHONE_NUMBER.slice(2, 5)}-${WHATSAPP_PHONE_NUMBER.slice(5, 9)}-${WHATSAPP_PHONE_NUMBER.slice(9)}`, subtext: "Tersedia pada jam kerja" },
   { icon: FiMail, title: "Email", details: "orionplus@gmail.com", subtext: "Respons pada jam kerja" },
-  { icon: FiMapPin, title: "Alamat", details: "Jl. Sunda No.38, Kb. Pisang, Kec. Sumur Bandung", subtext: "Kota Bandung, Jawa Barat 40112" },
+  { icon: FiMapPin, title: "Alamat", details: "Jl. Dr. Setiabudi No.145", subtext: "Bandung" },
   { icon: FiClock, title: "Jam Operasional", details: "Senin - Sabtu: 09:00 - 17:00", subtext: "Minggu & Hari Libur Nasional: Tutup" },
 ];
 
