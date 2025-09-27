@@ -4,7 +4,7 @@ import { FiArrowRight, FiShield, FiUser, FiWifi, FiZap } from 'react-icons/fi';
 import heroImg from "../assets/Orion-Pro-HQ-German-Quality.png";
 import clientLogo1 from "../assets/ourClient/konars.png"; // Ganti dengan path logo asli
 import clientLogo2 from "../assets/ourClient/poluxcabin.png"; // Ganti dengan path logo asli
-// import clientLogo3 from "../assets/ourClient/noxus.png"; // Ganti dengan path logo asli
+import clientLogo3 from "../assets/ourClient/noxus.png"; // Ganti dengan path logo asli
 import clientLogo4 from "../assets/ourClient/mahaDesign.png"; // Ganti dengan path logo asli
 import product1 from "../assets/orionProduct-photos/product1.png";
 import product2 from "../assets/orionProduct-photos/product5.png";
@@ -49,7 +49,7 @@ const collectionItems = [
 const clients = [
   { name: "Konars Design", logo: clientLogo1 },
   { name: "Polux Cabin", logo: clientLogo2 },
-  { name: "Noxus Construction",  },
+  { name: "Noxus Construction", logo: clientLogo3 },
   { name: "Maha Design", logo: clientLogo4 },
 ];
 
