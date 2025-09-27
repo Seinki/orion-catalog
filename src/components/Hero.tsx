@@ -1,5 +1,6 @@
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { FiArrowRight, FiShield, FiWifi, FiZap } from 'react-icons/fi';
 import heroImg from "../assets/Orion-Pro-HQ-German-Quality.png";
 import logo1 from "../assets/orion-logo.png";
 import logo2 from "../assets/orion-logo1.png";
@@ -9,18 +10,43 @@ import product1 from "../assets/orionProduct-photos/product1.png";
 import product2 from "../assets/orionProduct-photos/product5.png";
 import product3 from "../assets/orionProduct-photos/product10.png";
 import product4 from "../assets/orionProduct-photos/product15.png";
+import { motion } from 'framer-motion';
 
-type HeroProps = {
+type HomePageProps = {
   onExploreProducts: () => void;
   onCollectionCardClick?: () => void;
 };
 
-export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onCollectionCardClick }) => {
-  const featureIcons = [
-    { icon: FiShield, text: "Keamanan Terjamin", color: "text-cyan-400", desc: "Sistem smart home kami mengutamakan keamanan data dan perangkat Anda." },
-    { icon: FiWifi, text: "Koneksi Stabil", color: "text-blue-400", desc: "Teknologi WiFi terbaru untuk koneksi perangkat yang selalu stabil dan responsif." },
-    { icon: FiZap, text: "Efisiensi Energi", color: "text-green-400", desc: "Hemat energi dan biaya listrik dengan fitur otomatisasi cerdas." },
-  ];
+const featureIcons = [
+  { icon: FiShield, text: "Keamanan Terjamin", color: "text-cyan-400", desc: "Sistem smart home kami mengutamakan keamanan data dan perangkat Anda." },
+  { icon: FiWifi, text: "Koneksi Stabil", color: "text-blue-400", desc: "Teknologi WiFi terbaru untuk koneksi perangkat yang selalu stabil dan responsif." },
+  { icon: FiZap, text: "Efisiensi Energi", color: "text-green-400", desc: "Hemat energi dan biaya listrik dengan fitur otomatisasi cerdas." },
+];
+
+const collectionItems = [
+  {
+    img: product1,
+    title: "Smart Switch",
+    desc: "Switch pintar dengan kontrol sentuh dan WiFi."
+  },
+  {
+    img: product2,
+    title: "Smart Socket",
+    desc: "Soket pintar dengan monitoring energi dan proteksi anak."
+  },
+  {
+    img: product3,
+    title: "Control Center",
+    desc: "Panel kontrol pusat untuk seluruh perangkat smart home Anda."
+  },
+  {
+    img: product4,
+    title: "Sensor & Automation",
+    desc: "Sensor pintar dan fitur otomatisasi untuk keamanan dan kenyamanan."
+  }
+];
+
+export const HomePage: React.FC<HomePageProps> = ({ onExploreProducts, onCollectionCardClick }) => {
   return (
     <>
 
@@ -155,28 +181,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onCollectionCardC
         </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {/* Sample product cards */}
-            {[
-              {
-                img: product1,
-                title: "Smart Switch",
-                desc: "Switch pintar dengan kontrol sentuh dan WiFi."
-              },
-              {
-                img: product2,
-                title: "Smart Socket",
-                desc: "Soket pintar dengan monitoring energi dan proteksi anak."
-              },
-              {
-                img: product3,
-                title: "Control Center",
-                desc: "Panel kontrol pusat untuk seluruh perangkat smart home Anda."
-              },
-              {
-                img: product4,
-                title: "Sensor & Automation",
-                desc: "Sensor pintar dan fitur otomatisasi untuk keamanan dan kenyamanan."
-              }
-            ].map((item, idx) => (
+            {collectionItems.map((item, idx) => (
               <button
                 key={idx}
                 type="button"
@@ -191,10 +196,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onCollectionCardC
                 />
                 <div className="relative z-10 flex flex-col justify-end h-full bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4">
                   <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-lg font-semibold text-white drop-shadow-lg">{item.title}</h3>
+                    <h3 className="text-lg font-semibold text-white text-left drop-shadow-lg">{item.title}</h3>
                     <FiArrowRight className="w-5 h-5 text-cyan-400 animate-bounce-x" />
                   </div>
-                  <p className="text-slate-200 text-sm drop-shadow-lg">{item.desc}</p>
+                  <p className="text-slate-200 text-sm drop-shadow-lg text-left">{item.desc}</p>
                 </div>
                 <span className="absolute inset-0" aria-hidden="true" />
               </button>
@@ -205,5 +210,3 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onCollectionCardC
     </>
   );
 };
-import { FiArrowRight, FiShield, FiWifi, FiZap } from 'react-icons/fi';
-import { motion } from 'framer-motion';

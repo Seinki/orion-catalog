@@ -1,6 +1,17 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { FiClock, FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
+import { openWhatsApp, WHATSAPP_PHONE_NUMBER } from "../utils/whatsapp";
+
+const contactInfo = [
+  { icon: FiPhone, title: "Telepon", details: `+${WHATSAPP_PHONE_NUMBER.slice(0, 2)} ${WHATSAPP_PHONE_NUMBER.slice(2, 5)}-${WHATSAPP_PHONE_NUMBER.slice(5, 9)}-${WHATSAPP_PHONE_NUMBER.slice(9)}`, subtext: "Senin - Jumat, 09:00 - 18:00" },
+  { icon: FiMail, title: "Email", details: "info@orionplus.id", subtext: "Respons dalam 24 jam" },
+  { icon: FiMapPin, title: "Alamat", details: "Jakarta Smart Home Center", subtext: "Jl. Teknologi No. 123, Jakarta Selatan" },
+  { icon: FiClock, title: "Jam Operasional", details: "24/7 Online Support", subtext: "WhatsApp customer service" },
+];
+
+const subjectOptions = ["Konsultasi Produk", "Instalasi dan Setup", "Support Teknis", "Kerjasama Bisnis", "Lainnya"];
+
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = React.useState({
@@ -24,8 +35,7 @@ ${formData.message}
 
 Terima kasih.`;
 
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/6281234567890?text=${encodedMessage}`, "_blank");
+    openWhatsApp(message);
   };
 
   const handleChange = (
@@ -38,33 +48,6 @@ Terima kasih.`;
       [e.target.name]: e.target.value,
     }));
   };
-
-  const contactInfo = [
-    {
-      icon: FiPhone,
-      title: "Telepon",
-      details: "+62 812-3456-7890",
-      subtext: "Senin - Jumat, 09:00 - 18:00",
-    },
-    {
-      icon: FiMail,
-      title: "Email",
-  details: "info@orionplus.id",
-      subtext: "Respons dalam 24 jam",
-    },
-    {
-      icon: FiMapPin,
-      title: "Alamat",
-      details: "Jakarta Smart Home Center",
-      subtext: "Jl. Teknologi No. 123, Jakarta Selatan",
-    },
-    {
-      icon: FiClock,
-      title: "Jam Operasional",
-      details: "24/7 Online Support",
-      subtext: "WhatsApp customer service",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-slate-900 pt-20">
@@ -143,13 +126,9 @@ Terima kasih.`;
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                   >
                     <option value="">Pilih subjek pesan</option>
-                    <option value="Konsultasi Produk">Konsultasi Produk</option>
-                    <option value="Instalasi dan Setup">
-                      Instalasi dan Setup
-                    </option>
-                    <option value="Support Teknis">Support Teknis</option>
-                    <option value="Kerjasama Bisnis">Kerjasama Bisnis</option>
-                    <option value="Lainnya">Lainnya</option>
+                    {subjectOptions.map(option => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
                   </select>
                 </div>
 
@@ -226,10 +205,7 @@ Terima kasih.`;
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() =>
-                    window.open(
-                      "https://wa.me/6281234567890?text=Halo, saya ingin konsultasi produk Orion+",
-                      "_blank"
-                    )
+                    openWhatsApp("Halo, saya ingin konsultasi produk Orion+")
                   }
                   className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300"
                 >
@@ -240,7 +216,7 @@ Terima kasih.`;
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  onClick={() => window.open("tel:+6281234567890", "_blank")}
+                  onClick={() => window.open(`tel:+${WHATSAPP_PHONE_NUMBER}`, "_blank")}
                   className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-slate-700 text-slate-300 font-medium rounded-lg hover:bg-slate-600 hover:text-white transition-all duration-300"
                 >
                   <FiPhone size={20} />

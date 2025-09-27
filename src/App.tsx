@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { CartModal } from "./components/CartModal";
 import { ContactPage } from "./components/ContactPage";
-import { Hero } from "./components/Hero";
+import { HomePage } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { NotificationToast } from "./components/NotificationToast";
 import { ProductsPage } from "./components/ProductsPage";
@@ -49,12 +49,12 @@ function App() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
-  const showNotification = (
-    message: string,
-    type: "success" | "error" = "success"
-  ) => {
-    setNotification({ message, type, isVisible: true });
-  };
+  // const showNotification = (
+  //   message: string,
+  //   type: "success" | "error" = "success"
+  // ) => {
+  //   setNotification({ message, type, isVisible: true });
+  // };
 
   const hideNotification = () => {
     setNotification((prev) => ({ ...prev, isVisible: false }));
@@ -63,7 +63,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case "home":
-        return <Hero onExploreProducts={handleExploreProducts} onCollectionCardClick={handleExploreProducts} />;
+        return <HomePage onExploreProducts={handleExploreProducts} onCollectionCardClick={handleExploreProducts} />;
       case "products":
         return <ProductsPage />;
       case "support":
@@ -71,7 +71,7 @@ function App() {
       case "contact":
         return <ContactPage />;
       default:
-        return <Hero onExploreProducts={handleExploreProducts} onCollectionCardClick={handleExploreProducts} />;
+        return <HomePage onExploreProducts={handleExploreProducts} onCollectionCardClick={handleExploreProducts} />;
     }
   };
 

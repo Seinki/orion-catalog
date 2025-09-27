@@ -1,5 +1,7 @@
 import { CartItem } from '../types';
 
+export const WHATSAPP_PHONE_NUMBER = '6281234567890';
+
 export const generateWhatsAppMessage = (items: CartItem[]): string => {
   const productList = items.map(item => 
     `- ${item.name} (Model: ${item.model}) - ${item.quantity} pcs`
@@ -14,7 +16,7 @@ ${productList}
 Mohon informasinya untuk ketersediaan stok dan langkah selanjutnya. Terima kasih.`;
 };
 
-export const openWhatsApp = (message: string, phoneNumber: string = '6281234567890') => {
+export const openWhatsApp = (message: string, phoneNumber: string = WHATSAPP_PHONE_NUMBER) => {
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   window.open(whatsappUrl, '_blank');

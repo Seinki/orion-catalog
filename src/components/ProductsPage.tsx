@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { FiFilter } from 'react-icons/fi';
 import { products } from '../data/products';
@@ -31,10 +31,6 @@ function getHumanCategory(productName: string): string {
   return 'Lainnya';
 }
 
-// Dapatkan daftar kategori manusiawi unik dari semua produk
-const allHumanCategories = Array.from(
-  new Set(products.map(p => getHumanCategory(p.name)))
-);
 import { ProductCard } from './ProductCard';
 import { ProductModal } from './ProductModal';
 import { Product } from '../types';
@@ -48,6 +44,11 @@ export const ProductsPage: React.FC = () => {
   const [showCategory, setShowCategory] = React.useState(false);
   const [currentPage, setCurrentPage] = React.useState(1);
   const PRODUCTS_PER_PAGE = 12;
+
+  // Dapatkan daftar kategori manusiawi unik dari semua produk, di-memoize agar tidak dihitung ulang
+  const allHumanCategories = useMemo(() => Array.from(
+    new Set(products.map(p => getHumanCategory(p.name)))
+  ), []);
 
   const filteredProducts = products.filter(product => {
     const humanCat = getHumanCategory(product.name);

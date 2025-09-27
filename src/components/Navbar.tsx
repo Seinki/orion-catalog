@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { FiMenu, FiShoppingCart, FiX } from "react-icons/fi";
-import logo from "../assets/orion-logo.png";
+import logo from "../assets/orionLogo.png";
 import { useCartStore } from "../store/cartStore";
 
 interface NavbarProps {
@@ -43,11 +43,11 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span className="text-white font-bold text-sm">L</span>
             </div> */}
             <div className="flex items-center space-x-2">
-              <img src={logo} alt="orion-logo" width={35} />
-              <span>
+              <img src={logo} alt="orion-logo" width={50}/>
+              {/* <span>
                 <h1 className="text-white font-bold text-xl">Orion+</h1>
                 <p className="text-cyan-400 text-xs">Smart Home</p>
-              </span>
+              </span> */}
             </div>
           </motion.div>
 
