@@ -4,10 +4,10 @@ import { FiClock, FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
 import { openWhatsApp, WHATSAPP_PHONE_NUMBER } from "../utils/whatsapp";
 
 const contactInfo = [
-  { icon: FiPhone, title: "Telepon", details: `+${WHATSAPP_PHONE_NUMBER.slice(0, 2)} ${WHATSAPP_PHONE_NUMBER.slice(2, 5)}-${WHATSAPP_PHONE_NUMBER.slice(5, 9)}-${WHATSAPP_PHONE_NUMBER.slice(9)}`, subtext: "Senin - Jumat, 09:00 - 18:00" },
-  { icon: FiMail, title: "Email", details: "info@orionplus.id", subtext: "Respons dalam 24 jam" },
-  { icon: FiMapPin, title: "Alamat", details: "Jakarta Smart Home Center", subtext: "Jl. Teknologi No. 123, Jakarta Selatan" },
-  { icon: FiClock, title: "Jam Operasional", details: "24/7 Online Support", subtext: "WhatsApp customer service" },
+  { icon: FiPhone, title: "Telepon & WhatsApp", details: `+${WHATSAPP_PHONE_NUMBER.slice(0, 2)} ${WHATSAPP_PHONE_NUMBER.slice(2, 5)}-${WHATSAPP_PHONE_NUMBER.slice(5, 9)}-${WHATSAPP_PHONE_NUMBER.slice(9)}`, subtext: "Tersedia pada jam kerja" },
+  { icon: FiMail, title: "Email", details: "orionplus@gmail.com", subtext: "Respons pada jam kerja" },
+  { icon: FiMapPin, title: "Alamat", details: "Jl. Sunda No.38, Kb. Pisang, Kec. Sumur Bandung", subtext: "Kota Bandung, Jawa Barat 40112" },
+  { icon: FiClock, title: "Jam Operasional", details: "Senin - Sabtu: 09:00 - 17:00", subtext: "Minggu & Hari Libur Nasional: Tutup" },
 ];
 
 const subjectOptions = ["Konsultasi Produk", "Instalasi dan Setup", "Support Teknis", "Kerjasama Bisnis", "Lainnya"];

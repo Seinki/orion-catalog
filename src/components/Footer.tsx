@@ -42,13 +42,13 @@ const Footer: React.FC = () => (
       <div className="flex flex-col gap-2 items-center md:items-start">
         <div>
           <span className="font-semibold text-white">Alamat:</span><br />
-          Jl. Teknologi No. 123, Jakarta, Indonesia
+          Jl. Sunda No.38, Kb. Pisang, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40112
         </div>
         <div>
           <span className="font-semibold text-white">Telepon:</span> <a href="tel:+622112345678" className="text-cyan-400 hover:underline">(021) 123-45678</a>
         </div>
         <div>
-          <span className="font-semibold text-white">Email:</span> <a href="mailto:info@orionplus.id" className="text-cyan-400 hover:underline">info@orionplus.id</a>
+          <span className="font-semibold text-white">Email:</span> <a href="mailto:orionplus@gmail.com" className="text-cyan-400 hover:underline">orionplus@gmail.com</a>
         </div>
         <div>
           <span className="font-semibold text-white">WhatsApp:</span> <a href={`https://wa.me/${WHATSAPP_PHONE_NUMBER}`} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{`+${WHATSAPP_PHONE_NUMBER.slice(0, 2)} ${WHATSAPP_PHONE_NUMBER.slice(2, 5)}-${WHATSAPP_PHONE_NUMBER.slice(5, 9)}-${WHATSAPP_PHONE_NUMBER.slice(9)}`}</a>

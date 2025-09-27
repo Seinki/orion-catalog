@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import React from "react";
 import {
   FiChevronDown,
-  FiDownload,
+  // FiDownload,
   FiHelpCircle,
-  FiTool,
+  // FiTool,
 } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 import { openWhatsApp } from "../utils/whatsapp";
 
 export const SupportPage: React.FC = () => {
@@ -13,61 +14,62 @@ export const SupportPage: React.FC = () => {
 
   const faqs = [
     {
-      question: "Bagaimana cara mengatur perangkat Orion+ untuk pertama kali?",
+      question: "Bagaimana cara membeli produk Orion+?",
       answer:
-        "Unduh aplikasi Orion+, buat akun, dan ikuti panduan setup yang disediakan. Pastikan perangkat terhubung ke WiFi yang sama dengan smartphone Anda.",
+        "Anda dapat menjelajahi produk kami di halaman 'Produk'. Tambahkan item yang Anda inginkan ke keranjang, lalu klik tombol 'Pesan via WhatsApp' di dalam keranjang. Tim kami akan segera memproses pesanan Anda melalui WhatsApp.",
+    },
+    {
+      question:
+        "Apakah saya bisa memasang perangkat sendiri atau perlu teknisi?",
+      answer:
+        "Banyak produk kami seperti Smart Socket bersifat 'plug-and-play' dan mudah dipasang. Namun, untuk produk yang memerlukan instalasi listrik seperti Smart Switch, kami sangat merekomendasikan menggunakan jasa teknisi listrik profesional. Hubungi kami untuk rekomendasi teknisi di area Anda.",
+    },
+    {
+      question:
+        "Apa perbedaan antara produk WiFi dan produk Zigbee?",
+      answer:
+        "Produk WiFi terhubung langsung ke router Anda, cocok untuk memulai dengan beberapa perangkat. Produk Zigbee memerlukan Orion+ Hub/Gateway, namun menawarkan koneksi yang lebih stabil, hemat energi, dan tidak membebani jaringan WiFi Anda, ideal untuk rumah dengan banyak perangkat pintar.",
+    },
+    {
+      question: "Bagaimana dengan garansi produk Orion+?",
+      answer:
+        "Semua produk Orion+ dilindungi oleh garansi resmi 1 tahun untuk kerusakan pabrik. Simpan bukti pembelian Anda dan hubungi tim support kami melalui WhatsApp untuk klaim garansi.",
     },
     {
       question:
         "Apakah produk Orion+ kompatibel dengan Google Assistant dan Alexa?",
       answer:
-        "Ya, semua produk Orion+ mendukung integrasi dengan Google Assistant dan Amazon Alexa. Anda dapat mengontrol perangkat menggunakan perintah suara.",
-    },
-    {
-      question:
-        "Bagaimana jika saya lupa password WiFi dan perlu mengatur ulang perangkat?",
-      answer:
-        "Tekan dan tahan tombol reset pada perangkat selama 10 detik hingga lampu indikator berkedip. Perangkat akan kembali ke mode pairing dan siap untuk dikonfigurasi ulang.",
-    },
-    {
-      question: "Apakah saya perlu hub khusus untuk menggunakan produk Orion+?",
-      answer:
-        "Untuk sebagian besar produk WiFi, Anda tidak memerlukan hub khusus. Namun, untuk produk Zigbee, Anda memerlukan Orion+ Control Hub untuk komunikasi optimal.",
-    },
-    {
-      question: "Bagaimana cara memperbarui firmware perangkat?",
-      answer:
-        "Buka aplikasi Orion+, pilih perangkat yang ingin diperbarui, dan jika ada update tersedia, akan muncul notifikasi. Ikuti instruksi untuk memperbarui firmware secara otomatis.",
+        "Tentu saja! Sebagian besar produk kami dirancang untuk terintegrasi penuh dengan Google Assistant dan Amazon Alexa, memungkinkan Anda mengontrol rumah dengan perintah suara.",
     },
   ];
 
-  const guides = [
-    {
-      title: "Panduan Setup Awal",
-      description:
-        "Langkah-langkah lengkap mengatur perangkat Orion+ pertama kali",
-      icon: FiTool,
-      downloadUrl: "#",
-    },
-    {
-      title: "Manual Instalasi Switch",
-      description: "Panduan instalasi untuk semua jenis smart switch Orion+",
-      icon: FiDownload,
-      downloadUrl: "#",
-    },
-    {
-      title: "Konfigurasi Smart Lighting",
-      description: "Cara mengatur dan mengoptimalkan smart lighting system",
-      icon: FiTool,
-      downloadUrl: "#",
-    },
-    {
-      title: "Troubleshooting Guide",
-      description: "Solusi untuk masalah umum yang mungkin Anda hadapi",
-      icon: FiHelpCircle,
-      downloadUrl: "#",
-    },
-  ];
+  // const guides = [
+  //   {
+  //     title: "Panduan Setup Awal",
+  //     description:
+  //       "Langkah-langkah lengkap mengatur perangkat Orion+ pertama kali",
+  //     icon: FiTool,
+  //     downloadUrl: "#",
+  //   },
+  //   {
+  //     title: "Manual Instalasi Switch",
+  //     description: "Panduan instalasi untuk semua jenis smart switch Orion+",
+  //     icon: FiDownload,
+  //     downloadUrl: "#",
+  //   },
+  //   {
+  //     title: "Konfigurasi Smart Lighting",
+  //     description: "Cara mengatur dan mengoptimalkan smart lighting system",
+  //     icon: FiTool,
+  //     downloadUrl: "#",
+  //   },
+  //   {
+  //     title: "Troubleshooting Guide",
+  //     description: "Solusi untuk masalah umum yang mungkin Anda hadapi",
+  //     icon: FiHelpCircle,
+  //     downloadUrl: "#",
+  //   },
+  // ];
 
   return (
     <div className="min-h-screen bg-slate-900 pt-20">
@@ -142,7 +144,66 @@ export const SupportPage: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Installation Guides */}
+          {/* Contact Support */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 h-full flex flex-col justify-center text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Butuh Bantuan Lebih Lanjut?
+              </h3>
+              <p className="text-slate-400 mb-6 max-w-2xl mx-auto">
+                Tim support kami siap membantu Anda 24/7. Hubungi kami melalui
+                WhatsApp untuk mendapatkan bantuan langsung dari ahli smart home
+                kami.
+              </p>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => openWhatsApp("Halo, saya butuh bantuan dengan produk Orion+")}
+                className="inline-flex items-center justify-center space-x-2 px-6 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300"
+              >
+                <FaWhatsapp size={20} />
+                <span>Hubungi Tim Support</span>
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+
+        {/*
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Butuh Bantuan Lebih Lanjut?
+            </h3>
+            <p className="text-slate-400 mb-6 max-w-2xl mx-auto">
+              Tim support kami siap membantu Anda 24/7. Hubungi kami melalui
+              WhatsApp untuk mendapatkan bantuan langsung dari ahli smart home
+              kami.
+            </p>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => openWhatsApp("Halo, saya butuh bantuan dengan produk Orion+")}
+              className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300"
+            >
+              <FiHelpCircle size={20} />
+              <span>Chat dengan Support</span>
+            </motion.button>
+          </div>
+        </motion.div>
+        */}
+        {/* Installation Guides - Commented Out */}
+        {/*
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -188,36 +249,7 @@ export const SupportPage: React.FC = () => {
               ))}
             </div>
           </motion.div>
-        </div>
-
-        {/* Contact Support */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Butuh Bantuan Lebih Lanjut?
-            </h3>
-            <p className="text-slate-400 mb-6 max-w-2xl mx-auto">
-              Tim support kami siap membantu Anda 24/7. Hubungi kami melalui
-              WhatsApp untuk mendapatkan bantuan langsung dari ahli smart home
-              kami.
-            </p>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => openWhatsApp("Halo, saya butuh bantuan dengan produk Orion+")}
-              className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300"
-            >
-              <FiHelpCircle size={20} />
-              <span>Chat dengan Support</span>
-            </motion.button>
-          </div>
-        </motion.div>
+        */}
       </div>
     </div>
   );
